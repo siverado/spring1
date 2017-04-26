@@ -1,10 +1,9 @@
 package ua.epam.spring.hometask.service;
 
-import java.util.Collection;
+import ua.epam.spring.hometask.domain.DomainObject;
 
 import javax.annotation.Nonnull;
-
-import ua.epam.spring.hometask.domain.DomainObject;
+import java.util.Collection;
 
 /**
  * @author Yuriy_Tkach
@@ -21,7 +20,7 @@ public interface AbstractDomainObjectService<T extends DomainObject> {
      *            Object to save
      * @return saved object with assigned id
      */
-    public T save(@Nonnull T object);
+    public void save(@Nonnull T object);
 
     /**
      * Removing object from storage
