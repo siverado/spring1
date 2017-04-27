@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
+       <util:list id="auditoriums">
+              <bean class="ua.epam.spring.hometask.domain.Auditorium">
+                     <property name="name" value="Gorehowl"/>
+                     <property name="numberOfSeats" value="100"/>
+                     <property name="vipSeats">
+                            <util:set>
+                                   <value>10</value>
+                                   <value>20</value>
+                                   <value>30</value>
+                                   <value>40</value>
+                                   <value>50</value>
+                                   <value>60</value>
+                            </util:set>
+                     </property>
+              </bean>
+              <bean class="ua.epam.spring.hometask.domain.Auditorium">
+                     <property name="name" value="Doomhammer"/>
+                     <property name="numberOfSeats" value="200"/>
+                     <property name="vipSeats">
+                            <util:set>
+                                   <value>110</value>
+                                   <value>120</value>
+                                   <value>130</value>
+                                   <value>140</value>
+                                   <value>150</value>
+                                   <value>160</value>
+                            </util:set>
+                     </property>
+              </bean>
+       </util:list>
 </beans>

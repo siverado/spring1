@@ -13,7 +13,11 @@ import java.util.Set;
  */
 public class AuditoriumServiceImpl implements AuditoriumService {
 
-    Collection<Auditorium> auditoriums;
+    private Collection<Auditorium> auditoriums;
+
+    public AuditoriumServiceImpl(Collection<Auditorium> auditoriums) {
+        this.auditoriums = auditoriums;
+    }
 
     @Nonnull
     @Override
